@@ -9,3 +9,7 @@ def test_email():
     assert email_test_reg(".testemail@gmail.com") == None
     assert email_test_reg("testeremail.@gmail.com") == None
     assert email_test_reg("mainemail@@gmail.com") == None
+    assert email_test_reg("hellothere@edu.gmail.com") == True
+    assert email_test_reg("test..email@gmail.com") == None
+    assert email_test_reg("HeLLoTheRe@gmail.com") ==  True
+    assert email_test_reg("hellothere@educ41on.learn-now.gmail.com") ==  True

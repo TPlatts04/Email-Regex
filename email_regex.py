@@ -6,7 +6,7 @@ def main():
 
 
 def email_test_reg(user_email):
-    if matches := bool(re.search(r"^[^\.][\w!#$%&'*+\-#\/=?^`{|}~]{1,64}@[\w\-\.]*(gmail|hotmail|outlook|yahoo)\.(com|net|org|co\.uk)$", user_email, re.ASCII)):
+    if matches := bool(re.search(r"^[^\.][\w!#$%&'*+\-#\/=?^`{|}~]{1,64}@[\w\-\.]{0,255}(gmail|hotmail|outlook|yahoo)\.(com|net|org|co\.uk)$", user_email, flags=re.IGNORECASE | re.ASCII)):
         return matches
 
 
